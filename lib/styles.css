@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/***************************
+          Search
+****************************/
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.component-container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: 180px;
+  left: 150px;
+}
+
+.input-container {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+}
+
+
+/*#user-input {
+
+}
+
+.search-input {
+
+}*/
