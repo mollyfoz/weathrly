@@ -1,6 +1,14 @@
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+body{
+  font-family: 'Shrikhand', cursive;
+  /*font-family: 'Lemon', cursive;*/
 }
 
 /***************************
@@ -12,6 +20,20 @@
   height: 100vh;
 }
 
+.background-video-container  {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1000;
+}
+
+.background-video  {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
 .component-container {
   width: 1200px;
   margin: 0 auto;
@@ -20,21 +42,55 @@
 
 h1 {
   position: absolute;
-  top: 180px;
-  left: 150px;
+  top: 200px;
+  left: 518px;
+  font-size: 33px;
+  transition: 3s;
 }
 
 .input-container {
   position: absolute;
-  top: 200px;
-  left: 150px;
+  top: 251px;
+  left: 490px;
+  transition: 3s;
 }
 
 
-/*#user-input {
-
+#user-input {
+  width: 200px;
+  height: 30px;
+  border: solid 2px black;
+  padding-left: 5px;
+  font-size: 15px;
 }
 
-.search-input {
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 0px;
+  margin: 2px 0 0 7px;
+}
 
-}*/
+.search-btn:hover {
+  cursor: pointer
+}
+
+.move-input-container {
+  position: absolute;
+  top: 10px;
+  left: 900px;
+  transition: 3s
+}
+
+.move-h1  {
+  position: absolute;
+  top: 0px;
+  left: 518px;
+  font-size: 33px;
+  transition: 3s;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Lemon|Shrikhand')
