@@ -21,7 +21,7 @@ body{
 }
 
 .component-container {
-  width: 1200px;
+  width: 1000px;
   height: 100vh;
   margin: 0 auto;
   position: relative;
@@ -143,14 +143,14 @@ h1 {
 .move-input-container {
   position: absolute;
   top: 10px;
-  left: 870px;
+  left: 700px;
   transition: 3s
 }
 
 .move-h1  {
   position: absolute;
   top: 0px;
-  left: 518px;
+  left: 400px;
   font-size: 37px;
   transition: 3s;
   transform: rotate(0deg);
@@ -161,13 +161,53 @@ h1 {
 ****************************/
 
 .current-container  {
-  width: 100px;
-  height: 100px;
-  background: red;
+  width: 450px;
+  height: 200px;
+  /*background: red;*/
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 65px;
+  left: 33.333px;
 }
 
+.current-background,
+.current-graphic {
+  width: 450px;
+  height: 200px;
+  position: absolute;
+  background: black;
+  opacity: .5;
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.current-graphic {
+  position: absolute;
+  top: 65px;
+  right: 33.333px;
+}
+
+/***************************
+    7 Hour/ 10 Day Container
+****************************/
+
+.seven-hr-container,
+.ten-day-container {
+  width: 935px;
+  height: 100px;
+  position: absolute;
+  background: black;
+  opacity: .5;
+  border-radius: 3px;
+  z-index: -1;
+  top: 280px;
+  left: 33.333px;
+}
+
+.ten-day-container {
+  position: absolute;
+  top: 390px;
+  right: 33.333px;
+
+}
 
 @import url('https://fonts.googleapis.com/css?family=Lemon|Shrikhand')
