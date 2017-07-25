@@ -12,13 +12,25 @@ body{
 }
 
 /***************************
-          Search
+        General
 ****************************/
 
 .main-container {
   width: 100%;
   height: 100vh;
 }
+
+.component-container {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/***************************
+      Background Video
+****************************/
 
 .background-video-container  {
   width: 100%;
@@ -32,54 +44,106 @@ body{
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  animation-delay: 1s;
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: 5;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 2, .2);
+  -webkit-animation-duration: .2s;
 }
 
-.component-container {
-  width: 1200px;
-  margin: 0 auto;
-  position: relative;
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
 }
+
+/***************************
+      Search Component
+****************************/
+
 
 h1 {
   position: absolute;
+  color: #FFF;
   top: 200px;
-  left: 518px;
-  font-size: 33px;
+  left: 415px;
+  font-size: 70px;
   transition: 3s;
+  text-shadow: 2px 2px 4px black;
+  transform: rotate(-3deg);
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:0.1s;
+  animation-delay: 1.3s;
 }
 
 .input-container {
   position: absolute;
-  top: 251px;
-  left: 490px;
+  top: 300px;
+  left: 471px;
   transition: 3s;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 2s;
 }
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 
 #user-input {
   width: 200px;
   height: 30px;
-  border: solid 2px black;
+  border: solid 2px white;
   padding-left: 5px;
   font-size: 15px;
+  box-shadow: 0px 1px 4px black;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .search-btn {
-  background: none;
+  background: black;
+  opacity: .4;
   border: none;
   font-size: 20px;
-  padding: 0px;
-  margin: 2px 0 0 7px;
+  box-shadow: 0px 1px 4px black;
+  height: 32px;
+  transition: 1s;
+  float: right;
+  margin-top: -.5px;
+  width: 72px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.search-btn-text  {
+  font-size: 14px;
+  font-family: 'Biryani', sans-serif;
+  text-align: center;
+  line-height: 30px;
+  transition: 1s;
+  text-shadow: 2px 2px 4px black;
+  color: white;
 }
 
 .search-btn:hover {
-  cursor: pointer
+  cursor: pointer;
+}
+
+.search-btn-text:hover  {
+  transform: scale(1.1);
 }
 
 .move-input-container {
   position: absolute;
   top: 10px;
-  left: 900px;
+  left: 870px;
   transition: 3s
 }
 
@@ -87,10 +151,23 @@ h1 {
   position: absolute;
   top: 0px;
   left: 518px;
-  font-size: 33px;
+  font-size: 37px;
   transition: 3s;
+  transform: rotate(0deg);
 }
 
+/***************************
+      Current Container
+****************************/
+
+.current-container  {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Lemon|Shrikhand')
