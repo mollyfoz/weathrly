@@ -65,7 +65,7 @@ h1 {
   position: absolute;
   color: #FFF;
   top: 200px;
-  left: 415px;
+  left: 348px;
   font-size: 70px;
   transition: 3s;
   text-shadow: 2px 2px 4px black;
@@ -81,7 +81,7 @@ h1 {
 .input-container {
   position: absolute;
   top: 300px;
-  left: 471px;
+  left: 388px;
   transition: 3s;
   opacity:0;
   opacity: 1 \9;
@@ -91,9 +91,6 @@ h1 {
   animation-delay: 2s;
 }
 
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 
 #user-input {
@@ -152,6 +149,7 @@ h1 {
   top: 0px;
   left: 400px;
   font-size: 37px;
+  text-shadow: 2px 2px 4px black;
   transition: 3s;
   transform: rotate(0deg);
 }
@@ -162,28 +160,301 @@ h1 {
 
 .current-container  {
   width: 450px;
-  height: 200px;
-  /*background: red;*/
+  height: 250px;
   position: absolute;
   top: 65px;
   left: 33.333px;
+  transition: 3s;
 }
 
 .current-background,
 .current-graphic {
   width: 450px;
-  height: 200px;
+  height: 250px;
   position: absolute;
-  background: black;
+  background: white;
   opacity: .5;
-  border-radius: 3px;
+  border-radius: 6px;
   z-index: -1;
+  transition: 3s;
+  box-shadow: 2px 2px 12px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn2 ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 2s;
 }
 
-.current-graphic {
+.current-city {
+  font-size: 40px;
+  font-family: 'Biryani', sans-serif;
+  color: white;
+  /*position: absolute;
+  top: 5px;
+  left: 12px;*/
+  margin: 0 0 0 8px;
+  display: inline;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+.current-day {
+  font-size: 20px;
+  font-family: 'Biryani', sans-serif;
+  color: white;
+  /*position: absolute;
+  top: 19px;
+  left: 312px;*/
+  margin: 14px 15px 0 0;
+  float: right;
+  display: inline;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+.current-temp {
+  font-size: 144px;
+  font-family: 'Biryani', sans-serif;
+  color: #b99877;
+  /*position: absolute;
+  top: 40px;
+  left: 86px;*/
+  margin: 0 0 0 0;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:4s;
+  animation-delay: 5s;
+}
+
+.current-condition {
+  font-size: 25px;
+  /*font-family: 'Biryani', sans-serif;*/
+  color: white;
+  /*position: absolute;
+  top: 60px;
+  left: 0px;*/
+  margin: -4px 0 0 0;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+
+
+/***************************
+      Graphic Container
+****************************/
+
+.graphic-container  {
+  width: 450px;
+  height: 250px;
   position: absolute;
   top: 65px;
   right: 33.333px;
+  transition: 3s;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 55px;
+  left: 142px;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+.cloud {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 3.6875em;
+  height: 3.6875em;
+  margin: -1.84375em;
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow:
+    -2.1875em 0.6875em 0 -0.6875em,
+    2.0625em 0.9375em 0 -0.9375em,
+    0 0 0 0.375em #fff,
+    -2.1875em 0.6875em 0 -0.3125em #fff,
+    2.0625em 0.9375em 0 -0.5625em #fff;
+}
+
+.lightning {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 3.75em;
+  height: 3.75em;
+  margin: 0.375em 0 0 -2em;
+  background: currentColor;
+}
+
+.cloud:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -0.5em;
+  display: block;
+  width: 4.5625em;
+  height: 1em;
+  background: currentColor;
+  box-shadow: 0 0.4375em 0 -0.0625em #fff;
+}
+.cloud:nth-child(2) {
+  z-index: 0;
+  background: #fff;
+  box-shadow:
+    -2.1875em 0.6875em 0 -0.6875em #fff,
+    2.0625em 0.9375em 0 -0.9375em #fff,
+    0 0 0 0.375em #fff,
+    -2.1875em 0.6875em 0 -0.3125em #fff,
+    2.0625em 0.9375em 0 -0.5625em #fff;
+  opacity: 0.3;
+  transform: scale(0.5) translate(6em, -3em);
+  animation: cloud 4s linear infinite;
+}
+.cloud:nth-child(2):after { background: #fff; }
+
+
+.bolt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.25em 0 0 -0.125em;
+  color: #fff;
+  opacity: 0.3;
+  animation: lightning 2s linear infinite;
+}
+
+.bolt:nth-child(2) {
+  width: 0.5em;
+  height: 0.25em;
+  margin: -1.75em 0 0 -1.875em;
+  transform: translate(2.5em, 2.25em);
+  opacity: 0.2;
+  animation: lightning 1.5s linear infinite;
+}
+
+.bolt:before,
+.bolt:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin: -1.625em 0 0 -1.0125em;
+  border-top: 1.25em solid transparent;
+  border-right: 0.75em solid;
+  border-bottom: 0.75em solid;
+  border-left: 0.5em solid transparent;
+  transform: skewX(-10deg);
+}
+
+.bolt:after {
+  margin: -0.25em 0 0 -0.25em;
+  border-top: 0.75em solid;
+  border-right: 0.5em solid transparent;
+  border-bottom: 1.25em solid transparent;
+  border-left: 0.75em solid;
+  transform: skewX(-10deg);
+}
+
+.bolt:nth-child(2):before {
+  margin: -0.75em 0 0 -0.5em;
+  border-top: 0.625em solid transparent;
+  border-right: 0.375em solid;
+  border-bottom: 0.375em solid;
+  border-left: 0.25em solid transparent;
+}
+
+.bolt:nth-child(2):after {
+  margin: -0.125em 0 0 -0.125em;
+  border-top: 0.375em solid;
+  border-right: 0.25em solid transparent;
+  border-bottom: 0.625em solid transparent;
+  border-left: 0.375em solid;
+}
+
+.current-hi-lo {
+  font-size: 36px;
+  font-family: 'Biryani', sans-serif;
+  color: white;
+  position: absolute;
+  top: 22px;
+  left: 314px;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+.high-temp  {
+  color: #b99877;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:4s;
+  animation-delay: 5s;
+}
+
+.low-temp  {
+  color: #b99877;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:4s;
+  animation-delay: 5s;
+}
+
+.current-sum {
+  font-size: 22px;
+  /*font-family: 'Biryani', sans-serif;*/
+  color: white;
+  /*position: absolute;
+  top: 162px;
+  left: 26px;*/
+  text-align: center;
+  margin-top: 208px;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
 }
 
 /***************************
@@ -195,19 +466,62 @@ h1 {
   width: 935px;
   height: 100px;
   position: absolute;
-  background: black;
+  background: white;
   opacity: .5;
-  border-radius: 3px;
+  border-radius: 6px;
   z-index: -1;
-  top: 280px;
+  top: 328px;
   left: 33.333px;
+  transition: 3s;
+  box-shadow: 2px 2px 12px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn2 ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 2s;
 }
 
 .ten-day-container {
   position: absolute;
-  top: 390px;
+  top: 440px;
   right: 33.333px;
 
 }
+
+@keyframes cloud {
+  0% { opacity: 0; }
+  50% { opacity: 0.3; }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translate(-200%, -3em);
+  }
+}
+
+@keyframes lightning {
+  45% {
+    color: #fff;
+    background: #fff;
+    opacity: 0.2;
+  }
+  50% {
+    color: #0cf;
+    background: #0cf;
+    opacity: 1;
+  }
+  55% {
+    color: #fff;
+    background: #fff;
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
+@-moz-keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
+@keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
 
 @import url('https://fonts.googleapis.com/css?family=Lemon|Shrikhand')
