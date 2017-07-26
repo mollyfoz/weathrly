@@ -210,4 +210,42 @@ h1 {
 
 }
 
+/***************************
+            Card
+****************************/
+
+.card {
+  background-color: white;
+  height: 90px;
+  width: 90px;
+  /*position: absolute;
+  top: 5px;
+  left: 5px;*/
+  border-radius: 3px;
+}
+
+.hour-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+}
+
+.hour-list-item {
+  display: inline-block;
+}
+
+.day-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+}
+
+.day-list-item {
+  display: inline-block;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Lemon|Shrikhand')
