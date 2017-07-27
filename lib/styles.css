@@ -1,6 +1,4 @@
 
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +6,6 @@
 
 body{
   font-family: 'Shrikhand', cursive;
-  /*font-family: 'Lemon', cursive;*/
 }
 
 /***************************
@@ -51,10 +48,6 @@ body{
   -webkit-animation-duration: .2s;
 }
 
-@-webkit-keyframes blinker {
-  from { opacity: 1.0; }
-  to { opacity: 0.0; }
-}
 
 /***************************
       Search Component
@@ -62,13 +55,13 @@ body{
 
 
 h1 {
-  position: absolute;
+  font-size: 70px;
   color: #FFF;
+  text-shadow: 2px 2px 4px black;
+  position: absolute;
   top: 200px;
   left: 348px;
-  font-size: 70px;
   transition: 3s;
-  text-shadow: 2px 2px 4px black;
   transform: rotate(-3deg);
   opacity:0;
   opacity: 1 \9;
@@ -91,30 +84,28 @@ h1 {
   animation-delay: 2s;
 }
 
-
-
 #user-input {
   width: 200px;
   height: 30px;
+  font-size: 15px;
   border: solid 2px white;
   padding-left: 5px;
-  font-size: 15px;
   box-shadow: 0px 1px 4px black;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
 
 .search-btn {
+  width: 72px;
+  height: 32px;
   background: black;
   opacity: .4;
   border: none;
   font-size: 20px;
   box-shadow: 0px 1px 4px black;
-  height: 32px;
   transition: 1s;
   float: right;
   margin-top: -.5px;
-  width: 72px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -148,7 +139,7 @@ h1 {
   position: absolute;
   top: 0px;
   left: 400px;
-  font-size: 37px;
+  font-size: 42px;
   text-shadow: 2px 2px 4px black;
   transition: 3s;
   transform: rotate(0deg);
@@ -162,9 +153,26 @@ h1 {
   width: 450px;
   height: 250px;
   position: absolute;
-  top: 65px;
+  top: 86px;
   left: 33.333px;
   transition: 3s;
+}
+
+.current-title {
+  color: #FFF;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  font-size: 31px;
+  transition: 3s;
+  text-shadow: 2px 2px 4px black;
+  transform: rotate(-3deg);
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 3s;
 }
 
 .current-background,
@@ -190,9 +198,6 @@ h1 {
   font-size: 40px;
   font-family: 'Biryani', sans-serif;
   color: white;
-  /*position: absolute;
-  top: 5px;
-  left: 12px;*/
   margin: 0 0 0 8px;
   display: inline;
   text-shadow: 2px 2px 4px black;
@@ -208,9 +213,6 @@ h1 {
   font-size: 20px;
   font-family: 'Biryani', sans-serif;
   color: white;
-  /*position: absolute;
-  top: 19px;
-  left: 312px;*/
   margin: 14px 15px 0 0;
   float: right;
   display: inline;
@@ -225,12 +227,8 @@ h1 {
 
 .current-temp {
   font-size: 144px;
-  font-family: 'Biryani', sans-serif;
-  color: #b99877;
-  /*position: absolute;
-  top: 40px;
-  left: 86px;*/
-  margin: 0 0 0 0;
+  color: #80ceff;
+  margin: -17px 0 -42px 19px;
   text-align: center;
   text-shadow: 2px 2px 4px black;
   opacity:0;
@@ -243,11 +241,7 @@ h1 {
 
 .current-condition {
   font-size: 25px;
-  /*font-family: 'Biryani', sans-serif;*/
   color: white;
-  /*position: absolute;
-  top: 60px;
-  left: 0px;*/
   margin: -4px 0 0 0;
   text-align: center;
   text-shadow: 2px 2px 4px black;
@@ -259,26 +253,20 @@ h1 {
   animation-delay: 4s;
 }
 
-
-
-/***************************
-      Graphic Container
-****************************/
-
 .graphic-container  {
   width: 450px;
   height: 250px;
   position: absolute;
-  top: 65px;
+  top: 86px;
   right: 33.333px;
   transition: 3s;
 }
 
 .icon {
-  width: 150px;
+  width: 165px;
   position: absolute;
-  top: 55px;
-  left: 110px;
+  top: 10px;
+  left: 80px;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -288,11 +276,11 @@ h1 {
 }
 
 .current-hi-lo {
-  font-size: 36px;
+  font-size: 32px;
   font-family: 'Biryani', sans-serif;
   color: white;
   position: absolute;
-  top: 22px;
+  top: 10px;
   left: 314px;
   text-shadow: 2px 2px 4px black;
   opacity:0;
@@ -304,7 +292,9 @@ h1 {
 }
 
 .high-temp  {
-  color: #b99877;
+  font-family: 'Shrikhand', cursive;
+  font-size: 40px;
+  color: #80ceff;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -314,7 +304,9 @@ h1 {
 }
 
 .low-temp  {
-  color: #b99877;
+  font-family: 'Shrikhand', cursive;
+  font-size: 40px;
+  color: #80ceff;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -324,15 +316,14 @@ h1 {
 }
 
 .current-sum {
-  font-size: 18px;
-  /*font-family: 'Biryani', sans-serif;*/
+  font-size: 14px;
+  font-family: 'Biryani', sans-serif;
   color: white;
-  /*position: absolute;
-  top: 162px;
-  left: 26px;*/
   text-align: center;
-  margin-top: 208px;
-  text-shadow: 2px 2px 4px black;
+  margin-top: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-shadow: 0px 1px 2px black;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -341,59 +332,43 @@ h1 {
   animation-delay: 4s;
 }
 
+
 /***************************
-    7 Hour/ 10 Day Container
+    7 Hour container
 ****************************/
 
-.seven-hr-container,
-.ten-day-container {
-  width: 935px;
-  height: 100px;
+.hour-title {
+  color: #FFF;
   position: absolute;
-  background: white;
-  opacity: .5;
-  border-radius: 6px;
-  z-index: -1;
-  top: 328px;
-  left: 33.333px;
+  top: 350px;
+  left: 0px;
+  font-size: 32px;
   transition: 3s;
-  box-shadow: 2px 2px 12px black;
+  text-shadow: 2px 2px 4px black;
+  transform: rotate(-3deg);
   opacity:0;
   opacity: 1 \9;
-  animation:fadeIn2 ease-in 1;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 3s;
+}
+
+.seven-hr-container {
+  width: 942px;
+  height: 120px;
+  position: absolute;
+  opacity: .5;
+  z-index: -1;
+  top: 378px;
+  left: 29.333px;
+  transition: 3s;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
   animation-fill-mode:forwards;
   animation-duration:3s;
   animation-delay: 2s;
-}
-
-.ten-day-container {
-  position: absolute;
-  top: 440px;
-  right: 33.333px;
-}
-
-
-
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-@-webkit-keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
-@-moz-keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
-@keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
-
-/***************************
-            Card
-****************************/
-
-.card {
-  background-color: white;
-  height: 90px;
-  width: 90px;
-  /*position: absolute;
-  top: 5px;
-  left: 5px;*/
-  border-radius: 3px;
 }
 
 .hour-list {
@@ -408,7 +383,103 @@ h1 {
   display: inline-block;
 }
 
-.day-list {
+
+
+/***************************
+        hourly card
+****************************/
+
+.card {
+  height: 120px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hour-card-back  {
+  background-color: white;
+  opacity: .6;
+  height: 120px;
+  width: 120px;
+  border-radius: 6px;
+  position: absolute;
+  box-shadow: 2px 2px 12px black;
+  z-index: -1;
+}
+
+.hour-time {
+  font-size: 22px;
+  color: #80ceff;
+  margin: 1px 0 0 0;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+.hour-icon {
+  width: 56px;
+  animation: spin 8s infinite linear;
+  margin: 3px 0 3px 0;
+}
+
+.hour-temp  {
+  font-size: 20px;
+  font-family: 'Biryani', sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+
+/***************************
+    10 Day Container
+****************************/
+
+
+.ten-day-container {
+  width: 942px;
+  height: 100px;
+  position: absolute;
+  z-index: -1;
+  top: 546px;
+  left: 29.333px;
+  transition: 3s;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 2s;
+}
+
+.ten-day-title {
+  color: #FFF;
+  position: absolute;
+  top: 518px;
+  left: 0px;
+  font-size: 32px;
+  transition: 3s;
+  text-shadow: 2px 2px 4px black;
+  transform: rotate(-3deg);
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 3s;
+}
+
+.ten-day-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -416,9 +487,87 @@ h1 {
   padding: 0;
 }
 
-.day-list-item {
+.ten-day-list-item {
   display: inline-block;
 }
+
+
+/***************************
+        10 day card
+****************************/
+
+.ten-day-card {
+  height: 90px;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ten-day-card-back  {
+  background-color: white;
+  opacity: .6;
+  height: 90px;
+  width: 90px;
+  border-radius: 6px;
+  position: absolute;
+  box-shadow: 2px 2px 12px black;
+  z-index: -1;
+}
+
+.week-day {
+  font-size: 12px;
+  color: #80ceff;
+  margin: 2px 0 0 0;
+  text-shadow: 1px 1px 6px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+.ten-day-icon {
+  width: 46px;
+  animation: spin 8s infinite linear;
+  margin: 3px 0 3px 0;
+}
+
+.ten-day-h-l  {
+  font-size: 12px;
+  font-family: 'Biryani', sans-serif;
+  color: white;
+  text-shadow: 0px 1px 4px black;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
+}
+
+/***************************
+        keyfarmes
+****************************/
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
+@-moz-keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
+@keyframes fadeIn2 { from { opacity:0; } to { opacity:.6; } }
 
 
 @import url('https://fonts.googleapis.com/css?family=Lemon|Shrikhand')
