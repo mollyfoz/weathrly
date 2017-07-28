@@ -444,7 +444,7 @@ h1 {
 
 .hour-icon {
   width: 56px;
-  animation: spin 8s infinite linear;
+  /*animation: spin 8s infinite linear;*/
   margin: 3px 0 3px 0;
 }
 
@@ -551,7 +551,7 @@ h1 {
 
 .ten-day-icon {
   width: 46px;
-  animation: spin 8s infinite linear;
+  /*animation: spin 8s infinite linear;*/
   margin: 3px 0 3px 0;
 }
 
