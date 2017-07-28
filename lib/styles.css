@@ -37,6 +37,27 @@ body{
   z-index: -1000;
 }
 
+.background-video-container2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 758px;
+  overflow: hidden;
+  z-index: -1001;
+  display: none;
+}
+
+.background-video-container3 {
+  width: 100%;
+  height: 620px;
+  position: absolute;
+  top: 1500px;
+  overflow: hidden;
+  z-index: -1002;
+  transform: rotate(180deg);
+  display: none;
+}
+
 .background-video  {
   width: 100%;
   height: 100vh;
@@ -316,8 +337,8 @@ h1 {
 }
 
 .current-sum {
-  font-size: 14px;
-  font-family: 'Biryani', sans-serif;
+  font-size: 16px;
+  /*font-family: 'Biryani', sans-serif;*/
   color: white;
   text-align: center;
   margin-top: 200px;
@@ -545,6 +566,225 @@ h1 {
   animation-fill-mode:forwards;
   animation-duration:3s;
   animation-delay: 4s;
+}
+
+/***************************************
+media query 800
+****************************************/
+
+@media screen and (max-width: 980px) {
+
+  h1  {
+    top: 70px;
+    left: 70px;
+  }
+
+  .input-container  {
+    top: 171px;
+    left: 116px;
+  }
+
+  .background-video-container2 {
+    width: 100%;
+    height: 620px;
+    position: absolute;
+    top: 758px;
+    overflow: hidden;
+    z-index: -1001;
+    transform: rotate(180deg);
+    display: block;
+  }
+
+  .component-container  {
+    width: 500px;
+  }
+
+  .move-h1  {
+    left: 150px;
+  }
+
+  .move-input-container {
+    top: 64px;
+    left: 130px;
+  }
+
+  .current-title  {
+    top: 95px;
+  }
+
+  .current-container  {
+    top: 127px;
+    left: 25.333px;
+  }
+
+  .graphic-container  {
+    left: 25.333px;
+    top: 400px;
+  }
+
+  .hour-list-item {
+    margin-top: 21px;
+  }
+
+  .hour-list  {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .seven-hr-container {
+    width: 450px;
+    height: auto;
+    top: 670px;
+    left: 23.333px;
+  }
+
+  .hour-title {
+    top: 657px;
+  }
+
+  .ten-day-title  {
+    top: 1102px;
+  }
+
+  .ten-day-container  {
+    width: 450px;
+    height: auto;
+    top: 1118px;
+    left: 23.333px;
+  }
+
+  .ten-day-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .ten-day-list-item  {
+    margin-top: 18px;
+  }
+
+}
+
+
+/***************************************
+media query 460
+****************************************/
+
+@media screen and (max-width: 560px) {
+
+  .component-container  {
+    width: 320px;
+  }
+
+  h1  {
+    left: 21px;
+    font-size: 60px;
+  }
+
+  .input-container  {
+    top: 154px;
+    left: 40px;
+  }
+
+  .move-h1  {
+    left: 72px;
+  }
+
+  .move-input-container {
+    left: 46px;
+  }
+
+  .current-title  {
+    font-size: 30px;
+    top: 99px;
+    left: 4px;
+  }
+
+  .current-container  {
+    width: 320px;
+    top: 134px;
+    left: 16.333px;
+  }
+
+  .current-background {
+    width: 320px;
+  }
+
+  .current-graphic  {
+    width: 320px;
+  }
+
+  .current-day  {
+    margin-top: 18px;
+  }
+
+  .current-temp {
+    font-size: 120px;
+    margin: -18px 0 -18px -9px;
+  }
+
+  .current-condition  {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .icon {
+    width: 155px;
+    top: 20px;
+    left: 38px;
+  }
+
+  .current-hi-lo  {
+    left: 215px;
+  }
+
+  .current-sum  {
+    margin-top: 204px;
+  }
+
+  .hour-title {
+    left: 15px;
+  }
+
+  .seven-hr-container {
+    width: 320px;
+    left: 18.333px;
+  }
+
+  .ten-day-title {
+    top: 1244px;
+    left: 15px;
+  }
+
+  .ten-day-container  {
+    width: 320px;
+    top: 1261px;
+    left: 18.333px;
+  }
+
+  .background-video-container2  {
+    height: 768px;
+  }
+
+  .graphic-container  {
+    width: 320px;
+    left: 16.333px;
+  }
+
+
+  .background-video-container3 {
+    width: 100%;
+    height: 620px;
+    position: absolute;
+    top: 1107px;
+    overflow: hidden;
+    z-index: -1002;
+    transform: rotate(180deg);
+    display: block;
+  }
+
 }
 
 /***************************
