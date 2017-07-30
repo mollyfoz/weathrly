@@ -230,11 +230,11 @@ h1 {
 }
 
 .current-city {
-  font-size: 40px;
+  font-size: 32px;
   font-family: 'Biryani', sans-serif;
   color: white;
-  margin: 0 0 0 8px;
-  display: inline;
+  margin: 13px 0 0 8px;
+  /*display: inline;*/
   text-shadow: 2px 2px 4px black;
   opacity:0;
   opacity: 1 \9;
@@ -248,7 +248,7 @@ h1 {
   font-size: 20px;
   font-family: 'Biryani', sans-serif;
   color: white;
-  margin: 14px 15px 0 0;
+  margin: -36px 15px 0 0;
   float: right;
   display: inline;
   text-shadow: 2px 2px 4px black;
@@ -298,10 +298,10 @@ h1 {
 }
 
 .icon {
-  width: 165px;
+  width: 200px;
   position: absolute;
-  top: 10px;
-  left: 80px;
+  top: 0px;
+  left: 66px;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -753,7 +753,7 @@ media query 460
   }
 
   .current-day  {
-    margin-top: 18px;
+    margin-top: 0px;
   }
 
   .current-temp {
@@ -763,11 +763,11 @@ media query 460
 
   .current-condition  {
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: -7px;
   }
 
   .icon {
-    width: 130px;
+    width: 158px;
     top: -6px;
     left: 38px;
   }
@@ -790,6 +790,7 @@ media query 460
 
   .low-temp  {
     font-size: 30px;
+    margin-top: -3px;
   }
 
   .hour-title {
@@ -819,6 +820,10 @@ media query 460
   .graphic-container  {
     width: 320px;
     left: 16.333px;
+  }
+
+  .current-city {
+    font-size: 24px;
   }
 
   /*.background-video-container3 {
