@@ -37,27 +37,6 @@ body{
   z-index: -1000;
 }
 
-.background-video-container2 {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 758px;
-  overflow: hidden;
-  z-index: -1001;
-  display: none;
-}
-
-.background-video-container3 {
-  width: 100%;
-  height: 620px;
-  position: absolute;
-  top: 1500px;
-  overflow: hidden;
-  z-index: -1002;
-  transform: rotate(180deg);
-  display: none;
-}
-
 .background-video  {
   width: 100%;
   height: 100vh;
@@ -76,18 +55,28 @@ body{
 
 .suggest-display {
   width: 200px;
+  max-height: 510px;
+  overflow: scroll;
   /*height: 100px;*/
   background: white;
   position: absolute;
   top: 32px;
   left: 0px;
   z-index: 100;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  /*border: solid 2px black;*/
+  box-shadow: 0px 1px 4px black;
 }
 
 .suggestion-city  {
   font-size: 14px;
   list-style: none;
-  /*font-family: 'Biryani', sans-serif;*/
+  padding-left: 4px;
+  padding: 2px 0 2px 4px;
+  font-family: 'Biryani', sans-serif;
+  color: #80ceff;
+  /*text-shadow: 2px 2px 4px black;*/
 
 }
 
@@ -322,7 +311,7 @@ h1 {
 }
 
 .current-hi-lo {
-  font-size: 32px;
+  font-size: 25px;
   font-family: 'Biryani', sans-serif;
   color: white;
   position: absolute;
@@ -339,7 +328,7 @@ h1 {
 
 .high-temp  {
   font-family: 'Shrikhand', cursive;
-  font-size: 40px;
+  font-size: 35px;
   color: #80ceff;
   opacity:0;
   opacity: 1 \9;
@@ -351,7 +340,7 @@ h1 {
 
 .low-temp  {
   font-family: 'Shrikhand', cursive;
-  font-size: 40px;
+  font-size: 35px;
   color: #80ceff;
   opacity:0;
   opacity: 1 \9;
@@ -362,14 +351,15 @@ h1 {
 }
 
 .current-sum {
-  font-size: 16px;
-  /*font-family: 'Biryani', sans-serif;*/
+  font-size: 18px;
+  font-family: 'Biryani', sans-serif;
   color: white;
+  /*color: #80ceff;*/
   text-align: center;
-  margin-top: 200px;
+  margin-top: 167px;
   margin-left: 10px;
   margin-right: 10px;
-  text-shadow: 0px 1px 2px black;
+  text-shadow: 0px 1px 6px black;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -470,7 +460,13 @@ h1 {
 .hour-icon {
   width: 56px;
   /*animation: spin 8s infinite linear;*/
-  margin: 3px 0 3px 0;
+  margin: 3px 0 0 0;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
 }
 
 .hour-temp  {
@@ -578,6 +574,12 @@ h1 {
   width: 46px;
   /*animation: spin 8s infinite linear;*/
   margin: 3px 0 3px 0;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-delay: 4s;
 }
 
 .ten-day-h-l  {
@@ -609,15 +611,12 @@ media query 800
     left: 116px;
   }
 
-  .background-video-container2 {
-    width: 100%;
-    height: 620px;
-    position: absolute;
-    top: 758px;
-    overflow: hidden;
-    z-index: -1001;
-    transform: rotate(180deg);
-    display: block;
+  .background-video-container {
+    height: 1400px;
+  }
+
+  .background-video {
+    height: 100%;
   }
 
   .component-container  {
@@ -645,6 +644,10 @@ media query 800
   .graphic-container  {
     left: 25.333px;
     top: 400px;
+  }
+
+  .current-sum  {
+    margin-top: 165px;
   }
 
   .hour-list-item {
@@ -698,6 +701,14 @@ media query 460
 ****************************************/
 
 @media screen and (max-width: 560px) {
+
+  .background-video-container {
+    height: 1800px;
+  }
+
+  .background-video {
+    height: 100%
+  }
 
   .component-container  {
     width: 320px;
@@ -756,8 +767,8 @@ media query 460
   }
 
   .icon {
-    width: 155px;
-    top: 20px;
+    width: 130px;
+    top: -6px;
     left: 38px;
   }
 
@@ -766,7 +777,19 @@ media query 460
   }
 
   .current-sum  {
-    margin-top: 204px;
+    margin-top: 143px;
+  }
+
+  .current-hi-lo  {
+    font-size: 17px;
+  }
+
+  .high-temp  {
+    font-size: 30px;
+  }
+
+  .low-temp  {
+    font-size: 30px;
   }
 
   .hour-title {
@@ -789,17 +812,16 @@ media query 460
     left: 18.333px;
   }
 
-  .background-video-container2  {
+  /*.background-video-container2  {
     height: 768px;
-  }
+  }*/
 
   .graphic-container  {
     width: 320px;
     left: 16.333px;
   }
 
-
-  .background-video-container3 {
+  /*.background-video-container3 {
     width: 100%;
     height: 620px;
     position: absolute;
@@ -808,7 +830,7 @@ media query 460
     z-index: -1002;
     transform: rotate(180deg);
     display: block;
-  }
+  }*/
 
 }
 
