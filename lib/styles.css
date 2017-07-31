@@ -57,7 +57,6 @@ body{
   width: 200px;
   max-height: 510px;
   overflow: scroll;
-  /*height: 100px;*/
   background: white;
   position: absolute;
   top: 32px;
@@ -65,19 +64,15 @@ body{
   z-index: 100;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
-  /*border: solid 2px black;*/
   box-shadow: 0px 1px 4px black;
 }
 
 .suggestion-city  {
-  font-size: 14px;
-  list-style: none;
-  padding-left: 4px;
-  padding: 2px 0 2px 4px;
   font-family: 'Biryani', sans-serif;
+  font-size: 14px;
   color: #80ceff;
-  /*text-shadow: 2px 2px 4px black;*/
-
+  list-style: none;
+  padding: 2px 0 2px 4px;
 }
 
 .suggestion-city:hover{
@@ -164,13 +159,13 @@ h1 {
 }
 
 .search-btn-text  {
-  font-size: 14px;
   font-family: 'Biryani', sans-serif;
+  font-size: 14px;
+  color: white;
   text-align: center;
   line-height: 30px;
   transition: 1s;
   text-shadow: 2px 2px 4px black;
-  color: white;
 }
 
 .search-btn:hover {
@@ -190,10 +185,10 @@ h1 {
 }
 
 .move-h1  {
+  font-size: 42px;
   position: absolute;
   top: 0px;
   left: 400px;
-  font-size: 42px;
   text-shadow: 2px 2px 4px black;
   transition: 3s;
   transform: rotate(0deg);
@@ -213,11 +208,11 @@ h1 {
 }
 
 .current-title {
+  font-size: 31px;
   color: #FFF;
   position: absolute;
   top: 50px;
   left: 0px;
-  font-size: 31px;
   transition: 3s;
   text-shadow: 2px 2px 4px black;
   transform: rotate(-3deg);
@@ -249,11 +244,10 @@ h1 {
 }
 
 .current-city {
-  font-size: 32px;
   font-family: 'Biryani', sans-serif;
+  font-size: 32px;
   color: white;
   margin: 13px 0 0 8px;
-  /*display: inline;*/
   text-shadow: 2px 2px 4px black;
   opacity:0;
   opacity: 1 \9;
@@ -264,8 +258,8 @@ h1 {
 }
 
 .current-day {
-  font-size: 20px;
   font-family: 'Biryani', sans-serif;
+  font-size: 20px;
   color: white;
   margin: -36px 15px 0 0;
   float: right;
@@ -320,7 +314,7 @@ h1 {
   width: 85%;
   position: absolute;
   top: -76px;
-  left: -53px;
+  left: -27px;
   opacity: 0;
   opacity: 1 \9;
   animation: fadeIn ease-in 1;
@@ -343,8 +337,8 @@ h1 {
 }
 
 .current-hi-lo {
-  font-size: 25px;
   font-family: 'Biryani', sans-serif;
+  font-size: 25px;
   color: white;
   position: absolute;
   top: 10px;
@@ -383,10 +377,9 @@ h1 {
 }
 
 .current-sum {
-  font-size: 18px;
   font-family: 'Biryani', sans-serif;
+  font-size: 18px;
   color: white;
-  /*color: #80ceff;*/
   text-align: center;
   margin-top: 167px;
   margin-left: 10px;
@@ -457,18 +450,18 @@ h1 {
 ****************************/
 
 .card {
-  height: 120px;
   width: 120px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .hour-card-back  {
+  width: 120px;
+  height: 120px;
   background-color: white;
   opacity: .6;
-  height: 120px;
-  width: 120px;
   border-radius: 6px;
   position: absolute;
   box-shadow: 2px 2px 12px black;
@@ -490,7 +483,6 @@ h1 {
 
 .hour-icon {
   width: 56px;
-  /*animation: spin 8s infinite linear;*/
   margin: 3px 0 0 0;
   opacity:0;
   opacity: 1 \9;
@@ -501,8 +493,8 @@ h1 {
 }
 
 .hour-temp  {
-  font-size: 20px;
   font-family: 'Biryani', sans-serif;
+  font-size: 20px;
   color: white;
   text-shadow: 2px 2px 4px black;
   opacity:0;
@@ -536,11 +528,11 @@ h1 {
 }
 
 .ten-day-title {
+  font-size: 32px;
   color: #FFF;
   position: absolute;
   top: 518px;
   left: 0px;
-  font-size: 32px;
   transition: 3s;
   text-shadow: 2px 2px 4px black;
   transform: rotate(-3deg);
@@ -603,7 +595,6 @@ h1 {
 
 .ten-day-icon {
   width: 46px;
-  /*animation: spin 8s infinite linear;*/
   margin: 3px 0 3px 0;
   opacity:0;
   opacity: 1 \9;
@@ -614,8 +605,8 @@ h1 {
 }
 
 .ten-day-h-l  {
-  font-size: 12px;
   font-family: 'Biryani', sans-serif;
+  font-size: 12px;
   color: white;
   text-shadow: 0px 1px 4px black;
   opacity:0;
@@ -756,13 +747,13 @@ media query 460
   }
 
   h1  {
-    left: 21px;
     font-size: 60px;
+    left: 21px;
   }
 
   .invalid  {
-    left: 55px;
     font-size: 50px;
+    left: 55px;
   }
 
   .input-container  {
@@ -859,10 +850,6 @@ media query 460
     left: 18.333px;
   }
 
-  /*.background-video-container2  {
-    height: 768px;
-  }*/
-
   .graphic-container  {
     width: 320px;
     left: 16.333px;
@@ -872,27 +859,12 @@ media query 460
     font-size: 24px;
   }
 
-  /*.background-video-container3 {
-    width: 100%;
-    height: 620px;
-    position: absolute;
-    top: 1107px;
-    overflow: hidden;
-    z-index: -1002;
-    transform: rotate(180deg);
-    display: block;
-  }*/
-
 }
+
 
 /***************************
         keyfarmes
 ****************************/
-
-@keyframes spin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
-}
 
 @-webkit-keyframes blinker {
   from { opacity: 1.0; }
