@@ -111,6 +111,21 @@ h1 {
   transition: 3s;
   transform: rotate(-3deg);
   opacity:0;
+  z-index: 100;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:0.1s;
+  animation-delay: 1.3s;
+}
+
+.ron  {
+  width: 200px;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  opacity:0;
+  z-index: 1;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
   animation-fill-mode:forwards;
@@ -258,18 +273,19 @@ h1 {
 }
 
 .current-day {
-  font-family: 'Biryani', sans-serif;
-  font-size: 20px;
+  /*font-family: 'Biryani', sans-serif;*/
+  font-size: 28px;
   color: white;
-  margin: -36px 15px 0 0;
-  float: right;
-  display: inline;
+  /*color: #80ceff;*/
+  margin: 9px 0 0 16px;
+  /* float: right; */
+  /* display: inline; */
   text-shadow: 2px 2px 4px black;
-  opacity:0;
+  opacity: 0;
   opacity: 1 \9;
-  animation:fadeIn ease-in 1;
-  animation-fill-mode:forwards;
-  animation-duration:3s;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
   animation-delay: 2s;
 }
 
@@ -376,15 +392,36 @@ h1 {
   animation-delay: 2s;
 }
 
+.sum-container  {
+  position: absolute;
+  top: 180px;
+  left: 20px;
+  background: white;
+  opacity: .9;
+  width: 400px;
+  max-height: 64px;
+  box-shadow: 2px 2px 12px black;
+  border-radius: 6px;
+  overflow: scroll;
+  opacity:0;
+  opacity: 1 \9;
+  animation:fadeIn ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:4s;
+  animation-delay: 2s;
+}
+
 .current-sum {
   font-family: 'Biryani', sans-serif;
   font-size: 18px;
   color: white;
+  color: #80ceff;
   text-align: center;
-  margin-top: 167px;
+  margin: 5px 0 5px 0;
+  /*margin-top: 167px;
   margin-left: 10px;
-  margin-right: 10px;
-  text-shadow: 0px 1px 6px black;
+  margin-right: 10px;*/
+  /*text-shadow: 0px 1px 6px black;*/
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -632,6 +669,12 @@ media query 800
     left: 95px;
   }
 
+  .ron  {
+    width: 190px;
+    left: 156px;
+    top: 112px;
+  }
+
   .input-container  {
     top: 171px;
     left: 116px;
@@ -659,7 +702,7 @@ media query 800
   }
 
   .current-title  {
-    top: 95px;
+    top: 103px;
   }
 
   .current-container  {
@@ -670,10 +713,6 @@ media query 800
   .graphic-container  {
     left: 25.333px;
     top: 400px;
-  }
-
-  .current-sum  {
-    margin-top: 165px;
   }
 
   .hour-list-item {
@@ -734,6 +773,10 @@ media query 460
     left: 4px;
   }
 
+  .ron{
+    left: 74px;
+  }
+
   .background-video-container {
     height: 1800px;
   }
@@ -771,7 +814,7 @@ media query 460
 
   .current-title  {
     font-size: 30px;
-    top: 99px;
+    top: 108px;
     left: 4px;
   }
 
@@ -790,31 +833,34 @@ media query 460
   }
 
   .current-day  {
-    margin-top: 0px;
+    margin-top: 6px;
   }
 
   .current-temp {
     font-size: 115px;
-    margin: -8px 0 -18px -9px;
+    margin: 6px 0 -18px 0px;
   }
 
   .current-condition  {
-    font-size: 20px;
+    font-size: 26px;
     margin-top: -7px;
   }
 
   .icon {
     width: 85%;
     top: -50px;
-    left: -35px;
+    left: -25px;
   }
 
   .current-hi-lo  {
     left: 215px;
   }
 
-  .current-sum  {
-    margin-top: 160px;
+  .sum-container {
+    top: 156px;
+    left: 9px;
+    width: 300px;
+    max-height: 100px;
   }
 
   .current-hi-lo  {
