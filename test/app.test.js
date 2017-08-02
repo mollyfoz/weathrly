@@ -43,8 +43,32 @@ describe('App', () => {
   });
 
   it('should display current weather if status is set to open', () => {
-    wrapper.setState({ status: 'open', condition: {} })
+    wrapper.setState({ status: 'open', condition: {} });
     let current = wrapper.find('current-title');
     expect(current).toBeTruthy();
+  });
+
+  it('should have identifying text on the current parent container', () => {
+    wrapper.setState({ status: 'open', condition: {} });
+    let name = wrapper.find('h3.current-title');
+    expect(name.text()).toEqual('CURRENTLY');
+  })
+
+  it('should have identifying text on the 7 hour parent container', () => {
+    wrapper.setState({ status: 'open', condition: {} });
+    let name = wrapper.find('h3.hour-title');
+    expect(name.text()).toEqual('7 HOUR');
+  });
+
+  it('should have identifying text on the 10 day parent container', () => {
+    wrapper.setState({ status: 'open', condition: {} });
+    let name = wrapper.find('h3.ten-day-title');
+    expect(name.text()).toEqual('TEN DAY');
+  });
+
+  it('should have identifying text on the error page', () => {
+    wrapper.setState({ status: 'error', condition: {} });
+    let error = wrapper.find('p.invalid');
+    expect(error.text()).toEqual('Invalid Location');
   });
 })

@@ -6,15 +6,6 @@ import LocalStorage from '../__mock__/storageMock.js'
 
 describe('Search', () => {
   let wrapper;
-  let props = {
-    tree: new Trie(),
-    theSuggestions: [],
-    changeClass: [
-      'input-container',
-      'title'],
-    setPlaceholder: 'City, State or Zip Code',
-  };
-
 
   beforeEach(() => {
     wrapper = shallow(<Search />);
@@ -27,6 +18,8 @@ describe('Search', () => {
   it('should render title', () => {
     let title = wrapper.find('h1');
     expect(title).toHaveLength(1);
+
+    expect(title.text()).toEqual('Weathrly')
   });
 
   it('should initialize an empty array', () => {
