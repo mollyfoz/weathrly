@@ -124,8 +124,8 @@ h1 {
   position: absolute;
   top: 100px;
   left: 400px;
-  opacity:0;
   z-index: 1;
+  opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
   animation-fill-mode:forwards;
@@ -138,13 +138,13 @@ h1 {
   top: 300px;
   left: 388px;
   transition: 3s;
+  z-index: 1000;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
   animation-fill-mode:forwards;
   animation-duration:3s;
   animation-delay: 2s;
-  z-index: 1000;
 }
 
 #user-input {
@@ -173,6 +173,10 @@ h1 {
   border-top-right-radius: 3px;
 }
 
+.search-btn:hover {
+  cursor: pointer;
+}
+
 .search-btn-text  {
   font-family: 'Biryani', sans-serif;
   font-size: 14px;
@@ -181,10 +185,6 @@ h1 {
   line-height: 30px;
   transition: 1s;
   text-shadow: 2px 2px 4px black;
-}
-
-.search-btn:hover {
-  cursor: pointer;
 }
 
 .search-btn-text:hover  {
@@ -204,9 +204,9 @@ h1 {
   position: absolute;
   top: 0px;
   left: 400px;
-  text-shadow: 2px 2px 4px black;
   transition: 3s;
   transform: rotate(0deg);
+  text-shadow: 2px 2px 4px black;
 }
 
 /***************************
@@ -247,9 +247,9 @@ h1 {
   background: white;
   opacity: .5;
   border-radius: 6px;
-  z-index: -1;
   transition: 3s;
   box-shadow: 2px 2px 12px black;
+  z-index: -1;
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn2 ease-in 1;
@@ -273,13 +273,9 @@ h1 {
 }
 
 .current-day {
-  /*font-family: 'Biryani', sans-serif;*/
   font-size: 28px;
   color: white;
-  /*color: #80ceff;*/
   margin: 9px 0 0 16px;
-  /* float: right; */
-  /* display: inline; */
   text-shadow: 2px 2px 4px black;
   opacity: 0;
   opacity: 1 \9;
@@ -393,13 +389,12 @@ h1 {
 }
 
 .sum-container  {
+  width: 400px;
+  max-height: 64px;
   position: absolute;
   top: 180px;
   left: 20px;
   background: white;
-  opacity: .9;
-  width: 400px;
-  max-height: 64px;
   box-shadow: 2px 2px 12px black;
   border-radius: 6px;
   overflow: scroll;
@@ -414,14 +409,9 @@ h1 {
 .current-sum {
   font-family: 'Biryani', sans-serif;
   font-size: 18px;
-  color: white;
   color: #80ceff;
   text-align: center;
   margin: 5px 5px 5px 5px;
-  /*margin-top: 167px;
-  margin-left: 10px;
-  margin-right: 10px;*/
-  /*text-shadow: 0px 1px 6px black;*/
   opacity:0;
   opacity: 1 \9;
   animation:fadeIn ease-in 1;
@@ -436,11 +426,11 @@ h1 {
 ****************************/
 
 .hour-title {
+  font-size: 32px;
   color: #FFF;
   position: absolute;
   top: 350px;
   left: 0px;
-  font-size: 32px;
   transition: 3s;
   text-shadow: 2px 2px 4px black;
   transform: rotate(-3deg);
@@ -456,10 +446,9 @@ h1 {
   width: 942px;
   height: 120px;
   position: absolute;
-  opacity: .5;
-  z-index: -1;
   top: 378px;
   left: 29.333px;
+  z-index: -1;
   transition: 3s;
   opacity:0;
   opacity: 1 \9;
@@ -498,9 +487,9 @@ h1 {
   width: 120px;
   height: 120px;
   background-color: white;
+  position: absolute;
   opacity: .6;
   border-radius: 6px;
-  position: absolute;
   box-shadow: 2px 2px 12px black;
   z-index: -1;
 }
@@ -552,9 +541,9 @@ h1 {
   width: 942px;
   height: 100px;
   position: absolute;
-  z-index: -1;
   top: 546px;
   left: 29.333px;
+  z-index: -1;
   transition: 3s;
   opacity:0;
   opacity: 1 \9;
@@ -607,10 +596,10 @@ h1 {
 }
 
 .ten-day-card-back  {
+  width: 90px;
+  height: 90px;
   background-color: white;
   opacity: .6;
-  height: 90px;
-  width: 90px;
   border-radius: 6px;
   position: absolute;
   box-shadow: 2px 2px 12px black;
@@ -660,9 +649,31 @@ media query 800
 
 @media screen and (max-width: 980px) {
 
+  .background-video-container {
+    height: 1400px;
+  }
+
+  .background-video {
+    height: 100%;
+  }
+
   h1  {
     top: 70px;
     left: 70px;
+  }
+
+  .move-h1  {
+    left: 150px;
+  }
+
+  .input-container  {
+    top: 171px;
+    left: 116px;
+  }
+
+  .move-input-container {
+    top: 64px;
+    left: 130px;
   }
 
   .invalid  {
@@ -675,30 +686,8 @@ media query 800
     top: 112px;
   }
 
-  .input-container  {
-    top: 171px;
-    left: 116px;
-  }
-
-  .background-video-container {
-    height: 1400px;
-  }
-
-  .background-video {
-    height: 100%;
-  }
-
   .component-container  {
     width: 500px;
-  }
-
-  .move-h1  {
-    left: 150px;
-  }
-
-  .move-input-container {
-    top: 64px;
-    left: 130px;
   }
 
   .current-title  {
@@ -715,16 +704,6 @@ media query 800
     top: 400px;
   }
 
-  .hour-list-item {
-    margin-top: 21px;
-  }
-
-  .hour-list  {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0;
-  }
-
   .seven-hr-container {
     width: 450px;
     height: auto;
@@ -736,8 +715,14 @@ media query 800
     top: 657px;
   }
 
-  .ten-day-title  {
-    top: 1102px;
+  .hour-list-item {
+    margin-top: 21px;
+  }
+
+  .hour-list  {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
   }
 
   .ten-day-container  {
@@ -745,6 +730,10 @@ media query 800
     height: auto;
     top: 1118px;
     left: 23.333px;
+  }
+
+  .ten-day-title  {
+    top: 1102px;
   }
 
   .ten-day-list {
@@ -767,6 +756,32 @@ media query 460
 
 @media screen and (max-width: 560px) {
 
+  .background-video-container {
+    height: 1800px;
+  }
+
+  .background-video {
+    height: 100%
+  }
+
+  h1  {
+    font-size: 60px;
+    left: 21px;
+  }
+
+  .move-h1  {
+    left: 72px;
+  }
+
+  .input-container  {
+    top: 154px;
+    left: 40px;
+  }
+
+  .move-input-container {
+    left: 46px;
+  }
+
   .error-icon {
     width: 311px;
     top: 8px;
@@ -777,39 +792,13 @@ media query 460
     left: 74px;
   }
 
-  .background-video-container {
-    height: 1800px;
-  }
-
-  .background-video {
-    height: 100%
-  }
-
-  .component-container  {
-    width: 320px;
-  }
-
-  h1  {
-    font-size: 60px;
-    left: 21px;
-  }
-
   .invalid  {
     font-size: 50px;
     left: 55px;
   }
 
-  .input-container  {
-    top: 154px;
-    left: 40px;
-  }
-
-  .move-h1  {
-    left: 72px;
-  }
-
-  .move-input-container {
-    left: 46px;
+  .component-container  {
+    width: 320px;
   }
 
   .current-title  {
@@ -830,6 +819,15 @@ media query 460
 
   .current-graphic  {
     width: 320px;
+  }
+
+  .graphic-container  {
+    width: 320px;
+    left: 16.333px;
+  }
+
+  .current-city {
+    font-size: 24px;
   }
 
   .current-day  {
@@ -853,6 +851,7 @@ media query 460
   }
 
   .current-hi-lo  {
+    font-size: 17px;
     left: 215px;
   }
 
@@ -860,11 +859,7 @@ media query 460
     top: 156px;
     left: 9px;
     width: 300px;
-    max-height: 100px;
-  }
-
-  .current-hi-lo  {
-    font-size: 17px;
+    max-height: 88px;
   }
 
   .high-temp  {
@@ -876,13 +871,13 @@ media query 460
     margin-top: -3px;
   }
 
-  .hour-title {
-    left: 15px;
-  }
-
   .seven-hr-container {
     width: 320px;
     left: 18.333px;
+  }
+
+  .hour-title {
+    left: 15px;
   }
 
   .ten-day-title {
@@ -894,15 +889,6 @@ media query 460
     width: 320px;
     top: 1261px;
     left: 18.333px;
-  }
-
-  .graphic-container  {
-    width: 320px;
-    left: 16.333px;
-  }
-
-  .current-city {
-    font-size: 24px;
   }
 
 }
@@ -924,6 +910,5 @@ media query 460
 @-webkit-keyframes fadeIn2 { from { opacity:0; } to { opacity:.7; } }
 @-moz-keyframes fadeIn2 { from { opacity:0; } to { opacity:.7; } }
 @keyframes fadeIn2 { from { opacity:0; } to { opacity:.7; } }
-
 
 @import url('https://fonts.googleapis.com/css?family=Lemon|Shrikhand')
