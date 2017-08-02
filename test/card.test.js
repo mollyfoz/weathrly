@@ -44,4 +44,5 @@ describe('Card', () => {
     let newCard = wrapper.find('hour-temp');
     expect(newCard).toBeTruthy();
   });
+
 })
