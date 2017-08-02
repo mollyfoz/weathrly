@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from '../lib/App';
-
-
+import LocalStorage from '../__mock__/storageMock.js'
 
 describe('App', () => {
 
@@ -27,25 +26,31 @@ describe('App', () => {
     expect(wrapper.state()).toEqual({ status: 'open', condition: {} })
   })
 
-  it.skip('should call API if valid url is present', () => {
+  it('should display welcome page if status is closed', () => {
 
+    wrapper.setState({status: 'closed', condition: {}})
+    let welcome = wrapper.find('input-container');
+    expect(welcome).not.toBe('move-input-container');
   })
 
-  it.skip('should create a new weather object when API is called', () => {
-
+  it('should not find move-h1', () => {
+    wrapper.setState({status: 'closed', condition: {}})
+    let something = wrapper.find('move-h1')
+    expect(something).not.toBe('move-h1')
   })
 
-  it.skip('should set state condition to the weather object', () => {
+  it('should display error page if status is set to error', () => {
 
+    wrapper.setState({status:'error', condition: {}})
+    let errorPage = wrapper.find('invalid');
+    expect(errorPage).toBeTruthy();
   })
 
-  it.skip('should show an error message if API url is not valid', (data) => {
-    wrapper.instance().callAPI = jest.fn()
+  it('should display current weather if status is set to open', () => {
 
-    expect.assertions(data);
-    return wrapper(data).catch(error =>
-      expect(error).toMatch('error')
-    )
+    wrapper.setState({status:'open', condition: {}})
+    let current = wrapper.find('current-title');
+    expect(current).toBeTruthy();
   })
 
 })

@@ -26,4 +26,24 @@ describe('Card', () => {
     expect(wrapper).toBeDefined()
   })
 
+  it('should render a card', () => {
+    let newCard = wrapper.find('card');
+    expect(newCard).toBeTruthy();
+  })
+
+  it('should render the next hour on the card', () => {
+    let newCard = wrapper.find('hour-time');
+    expect(newCard).toBeTruthy();
+  })
+
+  it('should render the hour icon on the card', () => {
+    let newCard = wrapper.find('hour-icon');
+    expect(newCard).toBeTruthy();
+  })
+
+  it('should render the hour temp on the card', () => {
+    let newCard = wrapper.find('hour-temp');
+    expect(newCard).toBeTruthy();
+  })
+
 })
