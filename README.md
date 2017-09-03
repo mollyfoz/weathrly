@@ -1,31 +1,3 @@
-# React Starter Kit
+# Weathrly
 
-To install the dependencies:
-
-```
-npm install
-```
-
-To fire up a development server:
-
-```
-npm start
-```
-
-Once the server is running, you can visit:
-
-* `http://localhost:8080/webpack-dev-server/` to run your application.
-* `http://localhost:8080/webpack-dev-server/test.html` to run your test suite in the browser.
-
-To build the static files:
-
-```js
-npm run build
-```
-
-
-To run tests in Node:
-
-```js
-npm test
-```
+This project utilizes the Wunderground API to display weather information for a selected location. Current, seven hour, and ten day forecasts are displayed when the user selects a location. The search function employs a prefix trie to auto populate location suggestions based on user input.
