@@ -18,8 +18,12 @@ The search will return current weather data for the selected location, the forec
 
 The user can change location at any time.
 
-##Images
+## Images
+![Landing Page](https://github.com/mollyfoz/weathrly/blob/master/assets/screenshots/Screen%20Shot%202017-09-22%20at%206.50.23%20AM.png)
 
+![Search auto-complete](https://github.com/mollyfoz/weathrly/blob/master/assets/screenshots/Screen%20Shot%202017-09-22%20at%206.50.53%20AM.png)
+
+![Full Weather](https://github.com/mollyfoz/weathrly/blob/master/assets/screenshots/Screen%20Shot%202017-09-22%20at%206.51.32%20AM.png)
 
 #### Authors
 This application was created by Molly Foster and Jason Lucas
