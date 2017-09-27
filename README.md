@@ -26,5 +26,7 @@ The user can change location at any time.
 ![Full Weather](https://github.com/mollyfoz/weathrly/blob/master/assets/screenshots/Screen%20Shot%202017-09-22%20at%206.51.32%20AM.png)
 
 #### Authors
-This application was created by Molly Foster and Jason Lucas
+This application was created by Molly Foster and [Jason Lucas](http://jasonlucasdeveloper.com/)
+
+
 Turing School, July 2017
